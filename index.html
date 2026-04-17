@@ -162,17 +162,18 @@
     .song-info {
       background: #000;
       border-bottom: 1px solid #1a0000;
-      padding: 10px 16px 18px;
+      padding: 10px 10px 18px;
       text-align: center;
     }
 
     .band-name {
       font-family: 'Special Elite', serif;
-      font-size: clamp(2.1rem, 10.5vw, 2.8rem);
+      font-size: clamp(1.05rem, 7vw, 2.8rem);
       color: var(--blood);
-      line-height: 1.25;
+      line-height: 1.1;
       display: block;
-      letter-spacing: 3px;
+      letter-spacing: 1px;
+      white-space: nowrap;
       text-transform: lowercase;
       text-shadow:
         2px 2px 0 #1a0000,
@@ -488,6 +489,13 @@
       font-family: 'VT323', monospace;
       font-size: 0.58rem; color: #180808;
       letter-spacing: 2px; margin-top: 14px;
+    }
+
+    @media (max-width: 420px) {
+      .band-name {
+        font-size: clamp(0.95rem, 5.8vw, 1.45rem);
+        letter-spacing: 0.5px;
+      }
     }
   </style>
 </head>
